@@ -9,7 +9,7 @@ const int c_max_length = 24;
 
 int randInt(int min_val, int max_val)
 {
-    return rand() % (max_val - min_val) + min_val;
+    return rand() % (max_val - min_val) + min_val + 1;
 }
 
 
@@ -24,7 +24,7 @@ int main()
 {
     srand(time(NULL));
 
-    int length = randInt(c_min_length, c_max_length + 1);
+    int length = randInt(c_min_length, c_max_length);
     char *keysmash = malloc(length + 1);
     if (!keysmash)
     {
